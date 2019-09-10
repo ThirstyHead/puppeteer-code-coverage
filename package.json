@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ThirstyHead/puppeteer-code-coverage#readme",
   "dependencies": {
-    "puppeteer": "^1.19.0"
+    "puppeteer": "^1.19.0",
+    "puppeteer-to-istanbul": "^1.2.2"
   }
 }

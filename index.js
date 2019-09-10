@@ -1,5 +1,6 @@
 // https://www.philkrie.me/2018/07/04/extracting-coverage.html
 
+const pti = require('puppeteer-to-istanbul');
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
@@ -27,7 +28,7 @@ const path = require('path');
       if (err) throw err;
     });
 
-
+    // raw Puppeteer / Chrome coverage files
     const cssFile = "css-coverage.json";
     fs.writeFile(`${coverageDir}${path.sep}${cssFile}`, JSON.stringify(cssCoverage,null,2), function(err) {
         if(err) { return console.log(err); }
@@ -39,6 +40,9 @@ const path = require('path');
         if(err) { return console.log(err); }
         console.log(`${jsFile} written`);
     });
+
+    // istanbul formatted coverage files
+    pti.write([...jsCoverage, ...cssCoverage]);
 
     await browser.close();
 })();
