@@ -1,0 +1,22 @@
+{
+  "name": "puppeteer-code-coverage",
+  "version": "0.1.0",
+  "description": "Using Puppeteer to determine JS and CSS coverage in-browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThirstyHead/puppeteer-code-coverage.git"
+  },
+  "author": "Scott Davis <scott@thirstyhead.com>",
+  "license": "CC-BY-4.0",
+  "bugs": {
+    "url": "https://github.com/ThirstyHead/puppeteer-code-coverage/issues"
+  },
+  "homepage": "https://github.com/ThirstyHead/puppeteer-code-coverage#readme",
+  "dependencies": {
+    "puppeteer": "^1.19.0"
+  }
+}

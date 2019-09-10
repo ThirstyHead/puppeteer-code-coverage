@@ -1,0 +1,102 @@
+[
+  {
+    "url": "http://localhost:8888/css/dialog-polyfill.css",
+    "ranges": [
+      {
+        "start": 0,
+        "end": 318
+      },
+      {
+        "start": 320,
+        "end": 359
+      }
+    ],
+    "text": "dialog {\n  position: absolute;\n  left: 0; right: 0;\n  width: -moz-fit-content;\n  width: -webkit-fit-content;\n  width: fit-content;\n  height: -moz-fit-content;\n  height: -webkit-fit-content;\n  height: fit-content;\n  margin: auto;\n  border: solid;\n  padding: 1em;\n  background: white;\n  color: black;\n  display: block;\n}\n\ndialog:not([open]) {\n  display: none;\n}\n\ndialog + .backdrop {\n  position: fixed;\n  top: 0; right: 0; bottom: 0; left: 0;\n  background: rgba(0,0,0,0.1);\n}\n\n._dialog_overlay {\n  position: fixed;\n  top: 0; right: 0; bottom: 0; left: 0;\n}\n\ndialog.fixed {\n  position: fixed;\n  top: 50%;\n  transform: translate(0, -50%);\n}"
+  },
+  {
+    "url": "http://localhost:8888/css/index.css",
+    "ranges": [
+      {
+        "start": 0,
+        "end": 32
+      },
+      {
+        "start": 34,
+        "end": 140
+      },
+      {
+        "start": 142,
+        "end": 216
+      },
+      {
+        "start": 303,
+        "end": 326
+      },
+      {
+        "start": 328,
+        "end": 466
+      },
+      {
+        "start": 468,
+        "end": 526
+      },
+      {
+        "start": 528,
+        "end": 609
+      },
+      {
+        "start": 611,
+        "end": 667
+      },
+      {
+        "start": 669,
+        "end": 725
+      },
+      {
+        "start": 727,
+        "end": 775
+      },
+      {
+        "start": 848,
+        "end": 878
+      },
+      {
+        "start": 1131,
+        "end": 1358
+      },
+      {
+        "start": 1360,
+        "end": 1508
+      },
+      {
+        "start": 1510,
+        "end": 1558
+      },
+      {
+        "start": 1831,
+        "end": 1887
+      },
+      {
+        "start": 1889,
+        "end": 1922
+      },
+      {
+        "start": 1924,
+        "end": 1949
+      },
+      {
+        "start": 1951,
+        "end": 2166
+      },
+      {
+        "start": 2168,
+        "end": 2236
+      },
+      {
+        "start": 2238,
+        "end": 2291
+      }
+    ],
+    "text": "body{\n  background-color: tan;\n}\n\nbutton{\n  font-size: 1.2em;\n  border-radius: 6px;\n  margin-bottom: 1em;\n  box-shadow: 1px 1px 5px black;\n}\n\ncaption{\n  font-size: 1.2em;\n  font-weight: bold;\n  padding-bottom: 1em;\n}\n\n/* dialog polyfill */\ndialog + .backdrop{\n  background-color: rgba(0, 0, 0, 0.8);\n}\n\nmain{\n  padding: 2em;\n}\n\n.cart{\n  flex: 0 0 15%;\n  visibility: hidden;\n  background-color: #ccc;\n  padding: 1em;\n  font-family: sans-serif;\n  text-align: center;\n}\n\n.cart table{\n  width: 100%;\n  border-collapse: collapse;\n}\n\n.cart thead td{\n  padding-bottom: 1em;\n  font-weight: bold;\n  text-align: left;\n}\n\n.cart tbody{\n  font-style: italic;\n  text-align: left;\n}\n\n.cart .cart-total, .item-total{  \n  text-align: right;\n}\n\n#checkout-dialog{\n  height: 75%;\n  width: 50%;\n}\n\n#checkout-dialog::backdrop{\n  background-color: rgba(0, 0, 0, 0.8);\n}\n\n.container{\n  display: flex;\n}\n\n\n#checkout-dialog button{\n  font-size: 0.5em;\n  border-radius: 6px;\n  margin-bottom: 1em;\n  box-shadow: 1px 1px 5px black;\n}\n\n#checkout-dialog header{\n  padding: 0.25em;\n  margin-bottom: 1em;\n}\n\n.dialog-body{\n  max-height: 75%;\n  overflow-y: auto;\n}\n\n.item{\n  display: none;\n  background-color: white;\n  border-radius: 6px;\n  width: 12em;\n  height: 11em;\n  padding: 1em;\n  margin: 1em;\n  text-align: center;\n  cursor: pointer;\n  user-select: none;\n  -webkit-user-select: none;\n}\n\n.item img{\n  height: 75%;\n  object-fit: contain;\n  border-radius: 6px;\n  border: 1px solid #ccc;\n  user-select: none;\n  -webkit-user-select: none;\n}\n\n.item input[type='checkbox']{\n  display: none;\n}\n\n.item input[type='checkbox']:checked ~ p{\n  font-weight: bold;\n  font-style: italic;\n  color: green;\n}\n\n.item input[type='checkbox']:checked ~ p::after{\n  content: ' \\02713 ';\n  /* HTML entity for &check; in hex */\n  /* https://dev.w3.org/html5/html-author/charref */\n}\n\n.item .price::before{\n  content: '';\n  display: block;\n}\n\n.show{\n  display: inline-block;\n}\n\n.sidebar{\n  width: 20%;\n}\n\n.switch-field label {\n  display: block;\n  width: 5em;\n  background-color: #ccc;\n  text-align: center;\n  padding: 1em;\n  font-family: sans-serif;\n  user-select: none;\n  -webkit-user-select: none;\n  cursor: pointer;\n}\n\n.switch-field input:checked + label {\n  background-color: #A5DC86;\n}\n\n.switch-field input[type='radio']{\n  display: none;\n}\n\n.visible {\n  visibility: visible;\n}\n"
+  }
+]
