@@ -2,6 +2,7 @@
 
 const puppeteer = require('puppeteer');
 const fs = require('fs');
+const path = require('path');
 
 (async () => {
     const browser = await puppeteer.launch();
@@ -21,14 +22,20 @@ const fs = require('fs');
     ]);
 
     //Write out coverage to files
+    const coverageDir = 'coverage';
+    fs.mkdir(`./${coverageDir}`, { recursive: true }, (err) => {
+      if (err) throw err;
+    });
+
+
     const cssFile = "css-coverage.json";
-    fs.writeFile(cssFile, JSON.stringify(cssCoverage,null,2), function(err) {
+    fs.writeFile(`${coverageDir}${path.sep}${cssFile}`, JSON.stringify(cssCoverage,null,2), function(err) {
         if(err) { return console.log(err); }
         console.log(`${cssFile} written`);
     }); 
     
     const jsFile = "js-coverage.json";
-    fs.writeFile(jsFile, JSON.stringify(jsCoverage,null,2), function(err) {
+    fs.writeFile(`${coverageDir}${path.sep}${jsFile}`, JSON.stringify(jsCoverage,null,2), function(err) {
         if(err) { return console.log(err); }
         console.log(`${jsFile} written`);
     });
