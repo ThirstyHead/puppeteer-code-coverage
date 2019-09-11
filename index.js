@@ -23,23 +23,23 @@ const path = require('path');
     ]);
 
     //Write out coverage to files
-    const coverageDir = 'coverage';
-    fs.mkdir(`./${coverageDir}`, { recursive: true }, (err) => {
-      if (err) throw err;
-    });
+    //const coverageDir = 'coverage';
+    //fs.mkdir(`./${coverageDir}`, { recursive: true }, (err) => {
+    //  if (err) throw err;
+    //});
 
     // raw Puppeteer / Chrome coverage files
-    const cssFile = "css-coverage.json";
-    fs.writeFile(`${coverageDir}${path.sep}${cssFile}`, JSON.stringify(cssCoverage,null,2), function(err) {
-        if(err) { return console.log(err); }
-        console.log(`${cssFile} written`);
-    }); 
+    //const cssFile = "css-coverage.json";
+    //fs.writeFile(`${coverageDir}${path.sep}${cssFile}`, JSON.stringify(cssCoverage,null,2), function(err) {
+    //    if(err) { return console.log(err); }
+    //    console.log(`${cssFile} written`);
+    //}); 
     
-    const jsFile = "js-coverage.json";
-    fs.writeFile(`${coverageDir}${path.sep}${jsFile}`, JSON.stringify(jsCoverage,null,2), function(err) {
-        if(err) { return console.log(err); }
-        console.log(`${jsFile} written`);
-    });
+    //const jsFile = "js-coverage.json";
+    //fs.writeFile(`${coverageDir}${path.sep}${jsFile}`, JSON.stringify(jsCoverage,null,2), function(err) {
+    //    if(err) { return console.log(err); }
+    //    console.log(`${jsFile} written`);
+    //});
 
     // istanbul formatted coverage files
     pti.write([...jsCoverage, ...cssCoverage]);

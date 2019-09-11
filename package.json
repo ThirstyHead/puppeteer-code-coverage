@@ -4,7 +4,8 @@
   "description": "Using Puppeteer to determine JS and CSS coverage in-browser",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index.js",
+    "report": "nyc report --reporter=html"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/ThirstyHead/puppeteer-code-coverage#readme",
   "dependencies": {
+    "nyc": "^14.1.1",
     "puppeteer": "^1.19.0",
     "puppeteer-to-istanbul": "^1.2.2"
   }
